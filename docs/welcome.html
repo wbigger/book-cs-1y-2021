@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Chapter 1 - Informatica - Primo anno - Materiale didattico</title>
+        <title>Benvenuti - Informatica - Primo anno - Materiale didattico</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="custom.css">
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -75,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html" class="active"><strong aria-hidden="true">1.</strong> Chapter 1</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="welcome.html" class="active"><strong aria-hidden="true">1.</strong> Benvenuti</a></li><li class="chapter-item expanded "><a href="binary.html"><strong aria-hidden="true">2.</strong> Numerazione binaria</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -110,6 +111,9 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/wbigger/book-cs-1y-2021.git" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -134,22 +138,49 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
+                        <h1 id="benvenuti-alliis-marconi-di-civitavecchia"><a class="header" href="#benvenuti-alliis-marconi-di-civitavecchia">Benvenuti all'IIS Marconi di Civitavecchia!</a></h1>
+<p>Benvenuti all'indirizzo informatico dell'Istituto di Istruzione Superiore Guglielmo Marconi di Civitavecchia.</p>
+<p>Durante questi cinque anni, apprenderete il funzionamento del computer, sia dal punto di vista hardware che software, e come connettere i computer tra di loro in rete.</p>
+<p>Imparerete a creare delle applicazioni con diversi linguaggi e tecnologie, a gestire database, a creare pagine web. Il viaggio è lungo, ma spero che lo troverete appassionante!</p>
+<p>Ricordatevi però sempre una cosa: il lavoro dell'informatico non è aggiustare computer, passare dei cavi o scrivere un'applicazione. Il nostro mestiere è <em>aiutare le persone a risolvere problemi</em>. Dobbiamo quindi sempre avere bene in mente quale problema stiamo risolvendo e per chi, per fare in modo che il nostro lavoro sia veramente utile agli altri.</p>
+<blockquote>
+<p>Il libro di testo adottato è <em>Turing, Informatica per competenze</em> di Piero Gallo, editore Minerva Scuola Mondadori Education</p>
+</blockquote>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="next" href="binary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="next" href="binary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
