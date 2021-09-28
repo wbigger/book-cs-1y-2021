@@ -22,7 +22,7 @@ Per prima cosa, abbiamo bisogno di un numero di _simboli_ pari alla base di nume
 
 Sono le cifre a cui siamo abituati, ma adesso dobbiamo guardarle con uno sguardo nuovo: come dei simboli, appunto, che rappresentano una cifra del nostro sistema di numerazione.
 
-> Possiamo rappresentare le cifre anche con simboli diversi, come ad esempio in Cina: 一,二,三,四,五,六,七,八,九,十. Non cambia nulla, i simboli sono una convenzione tra chi scrive e chi legge, basta mettersi d'accordo.
+> Possiamo rappresentare le cifre anche con simboli diversi, come ad esempio in Cina: 零,一,二,三,四,五,六,七,八,九. Non cambia nulla, i simboli sono una convenzione tra chi scrive e chi legge, basta mettersi d'accordo.
 
 Con la numerazione binaria, abbiamo bisogno di soli due simboli. Possiamo scegliere i simboli che preferiamo, ed effettivamente in informatica ne incontrerete diversi, ad esempio:
 - 0,1
