@@ -148,7 +148,3 @@ numero di bit per pixel: 4
 numero totale di bit: 4*12 = 48 
 ```
 
-# Altri esempi per esercitarsi
-Immaginiamo che avete parcheggiato la vostra bicicletta con un lucchetto a 3 cifre, ed il numero per sbloccarlo è 73. Avete paura di dimenticarvi il numero, ma non volete scriverlo sopra la bici per paura che ovviamente un ladro potrebbe accorgersene e rubarla. Pensate quindi di usare due scotch, uno di colore bianco (valore 1) ed uno di colore nero (valore 0) da attaccare sulla canna della bici, per scrivere il numero di sblocco in binario.
-
-Qual è la sequenza di scotch corretta?
