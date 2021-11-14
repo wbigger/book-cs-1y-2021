@@ -4,7 +4,9 @@
   margin-right: auto;
   width: 50%;
 }
-
+.img-container {
+    text-align: center;
+}
 .w50p {
     width: 50%;
 }

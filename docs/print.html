@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="welcome.html"><strong aria-hidden="true">1.</strong> Benvenuti</a></li><li class="chapter-item expanded "><a href="binary.html"><strong aria-hidden="true">2.</strong> Numerazione binaria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="binary-ex.html"><strong aria-hidden="true">2.1.</strong> Esercizi</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="welcome.html"><strong aria-hidden="true">1.</strong> Benvenuti</a></li><li class="chapter-item expanded "><a href="binary.html"><strong aria-hidden="true">2.</strong> Numerazione binaria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="binary-ex.html"><strong aria-hidden="true">2.1.</strong> Esercizi</a></li></ol></li><li class="chapter-item expanded "><a href="ascii.html"><strong aria-hidden="true">3.</strong> Codifica dei caratteri</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ascii-ex.html"><strong aria-hidden="true">3.1.</strong> Esercizi</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -262,6 +262,89 @@ Quanti bit devo usare per poter contare tutte le penne?</p>
 <p>Ho uno schermo largo 10 pixel ed alto 5 pixel. Uso 16 colori per ogni pixel. Di quanti bit ho bisogno per rappresentare in memoria tutto lo schermo?</p>
 <h2 id="domanda-aperta"><a class="header" href="#domanda-aperta">Domanda aperta</a></h2>
 <p>Immaginiamo che avete parcheggiato la vostra bicicletta con un lucchetto a 3 cifre, ed il numero per sbloccarlo è 73. Avete paura di dimenticarvi il numero, ma non volete scriverlo sopra la bici per paura che ovviamente un ladro potrebbe rubarla. Pensate quindi di usare due rotoli di scotch di colore diverso, uno di colore bianco (valore 1) ed uno di colore nero (valore 0) da attaccare sulla canna della bici. Qual è la sequenza di scotch corretta per rappresentare il codice di sblocco? Scrivere in massimo 4 righe (circa 320 caratteri) il ragionamento che avete usato per arrivare al risultato.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ascii-codes"><a class="header" href="#ascii-codes">ASCII codes</a></h1>
+<p>Lo standard più usato per rappresentare i caratteri base dell'alfabeto latino è l'ASCII (pronuncia IPA: æski, proncia traslitterata in italiano: askii). ASCII è l'acronimo di American Standard Code for Information Interchange. Come dice il nome, è uno standard americano quindi è pensato soprattutto per la lingua inglese, che non prevede lettere con l'accento.</p>
+<blockquote>
+<p>Per altri dettagli vedete pagg. 58-59 del vostro libro di testo.</p>
+</blockquote>
+<h1 id="i-caratteri-non-stampabili"><a class="header" href="#i-caratteri-non-stampabili">I caratteri non stampabili</a></h1>
+<p>I primi 32 caratteri sono detti <em>caratteri di controllo</em>, non sono stampabili e servono per vari scopi, come ad esempio per codificare i tasti freccia (su, giù, destra, sinistra), il tasto per cancellare (canc,del), e così via. </p>
+<p>A noi interessano soprattutto i seguenti:</p>
+<table><thead><tr><th align="center">Bit</th><th align="center">Decimale</th><th align="center">Codice</th><th>Descrizione</th></tr></thead><tbody>
+<tr><td align="center">0000</td><td align="center">0</td><td align="center">NUL</td><td>&quot;nessun carattere&quot;, ha vari usi in informatica</td></tr>
+<tr><td align="center">....</td><td align="center">..</td><td align="center">..</td><td>.....</td></tr>
+<tr><td align="center">0110</td><td align="center">10</td><td align="center">LF</td><td>&quot;Line Feed&quot;, per andare a capo</td></tr>
+<tr><td align="center">0111</td><td align="center">10</td><td align="center">CR</td><td>&quot;Carriage Return&quot;, altro carattere per andare a capo</td></tr>
+<tr><td align="center">....</td><td align="center">..</td><td align="center">..</td><td>.....</td></tr>
+</tbody></table>
+<p>Perché ci sono due caratteri per andare a capo? Questo deriva direttamente dagli antenati diretti dei computer e delle tastiere, le macchine da scrivere meccaniche e successivamente le &quot;<a href="https://en.wikipedia.org/wiki/Teleprinter">teletypewriter</a>&quot;(abbreviato &quot;tty&quot;, sigla che ritroverete fra qualche anno...). In queste macchine infatti, per &quot;andare a capo&quot; bisognava effettuare due operazioni distinte tra loro: far scorrere la pagina in basso di una riga (line feed) e far tornare il carrello nella posizione più a sinistra della pagina.</p>
+<figure class="img-container">
+    <video controls>
+        <source src="assets/lettera22-lf-cr.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <figcaption>Lettera 22, line feed & carriage return</figcaption>
+</figure>
+<p>Quando si sono cominciati ad usare i monitor e non la carta, la distinzione non aveva più molto senso. Alcune aziende, come ad esempio Microsoft, hanno deciso di mantenere entrambi i caratteri, quindi per andare a capo in un file alla fine di ogni riga bisogna aggiungere CR+LF. Altri, come ad esempio Unix e derivati (inclusi Linux e macOS) hanno invece semplificato ed ottimizzato utilizzando un solo carattere, LF. È importante sapere queste cose perché quando modificate un file di testo di un programma, potrebbe avere un fine riga diverso da quello che vi aspettate e avere dei problemi. Nella maggior parte degli editor di testo oggi viene specificato nella barra in basso.</p>
+<blockquote>
+<p>Attenzione: questo discorso non vale per documenti creati con elaboratori di testo come Microsoft Word, perché in questo caso il file non è semplicemente l'insieme dei caratteri che genera il testo ma contiene molte più informazioni, come la formattazione, l'impaginazione, etc.</p>
+</blockquote>
+<h1 id="i-caratteri-stampabili"><a class="header" href="#i-caratteri-stampabili">I caratteri stampabili</a></h1>
+<p>L'ASCII base prevede 95 caratteri, che comprendono:</p>
+<ul>
+<li>26 lettere minuscole (a..z)</li>
+<li>26 lettere maiuscole (A..Z)</li>
+<li>10 numeri (0..9)</li>
+<li>32 caratteri di punteggiatura</li>
+</ul>
+<p>I caratteri di punteggiatura nell'ambito informatico vengono usati per gli scopi più diversi e spesso sono chiamati con un nome diverso nello <em>slang</em> (dialetto) dei programmatori.</p>
+<table><thead><tr><th align="center">Carattere</th><th>Nome ufficiale italiano</th><th>Nome ufficiale inglese</th><th>Dialetto informatico</th></tr></thead><tbody>
+<tr><td align="center"></td><td>spazio</td><td>space</td><td></td></tr>
+<tr><td align="center">!</td><td>punto esclamativo</td><td>exclamation mark</td><td>bang</td></tr>
+<tr><td align="center">&quot;</td><td>doppio apice</td><td>double quote</td><td></td></tr>
+<tr><td align="center">#</td><td>cancelletto</td><td>hash</td><td>sharp</td></tr>
+<tr><td align="center">$</td><td>dollaro</td><td>dollar</td><td></td></tr>
+<tr><td align="center">%</td><td>percento</td><td>percent</td><td></td></tr>
+<tr><td align="center">&amp;</td><td>e commerciale</td><td>ampersand</td><td></td></tr>
+<tr><td align="center">'</td><td>apice singolo</td><td>single quote</td><td></td></tr>
+<tr><td align="center">( )</td><td>parentesi tonde</td><td>round bracket</td><td></td></tr>
+<tr><td align="center">*</td><td>asterisco</td><td>asterisk</td><td>star</td></tr>
+<tr><td align="center">+</td><td>più</td><td>plus</td><td></td></tr>
+<tr><td align="center">,</td><td>virgola</td><td>comma</td><td></td></tr>
+<tr><td align="center">-</td><td>meno o trattino</td><td>minus or dash</td><td></td></tr>
+<tr><td align="center">.</td><td>punto</td><td>full stop</td><td>dot</td></tr>
+<tr><td align="center">/</td><td>barra</td><td>slash</td><td></td></tr>
+<tr><td align="center">:</td><td>due punti</td><td>colon</td><td></td></tr>
+<tr><td align="center">;</td><td>punto e virgola</td><td>semicolon</td><td></td></tr>
+<tr><td align="center">&lt; &gt;</td><td>minore / maggiore o parentesi angolari (o angolate)</td><td>less-than / more than</td><td>angle bracket</td></tr>
+<tr><td align="center">=</td><td>uguale</td><td>equal</td><td></td></tr>
+<tr><td align="center">/</td><td>barra</td><td>slash</td><td></td></tr>
+<tr><td align="center">?</td><td>punto interrogativo</td><td>question mark</td><td></td></tr>
+<tr><td align="center">@</td><td>chiocciola</td><td>at</td><td></td></tr>
+<tr><td align="center">^</td><td>accento circonflesso</td><td>circumflex</td><td>caret</td></tr>
+<tr><td align="center">[ ]</td><td>parentesi quadre</td><td>square bracket</td><td></td></tr>
+<tr><td align="center">\</td><td>barra rovesciata</td><td>backslash</td><td></td></tr>
+<tr><td align="center">_</td><td>trattino basso</td><td>underscore</td><td></td></tr>
+<tr><td align="center">`</td><td>accento grave</td><td>grave accent</td><td>backtick (o backquote)</td></tr>
+<tr><td align="center">{ }</td><td>parentesi graffe</td><td>curly brackets</td><td></td></tr>
+<tr><td align="center">|</td><td>barra verticale</td><td>vertical bar</td><td>pipe (tubo)</td></tr>
+<tr><td align="center">~</td><td>tilde</td><td>tilde</td><td></td></tr>
+</tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="esercizi"><a class="header" href="#esercizi">Esercizi</a></h1>
+<h2 id="windows"><a class="header" href="#windows">Windows</a></h2>
+<p>Aprite l'applicazione Blocco note (Notepad, in inglese). Se avete una versione abbastanza recente, nella barra in basso vi dovrebbe comparire quale ritorno a capo l'editor sta usando, che per un nuovo file dovrebbe essere CRLF.</p>
+<blockquote>
+<p>Notepad ha introdotto il <a href="https://devblogs.microsoft.com/commandline/extended-eol-in-notepad/">supporto</a> per altri terminatori di linea nel 2018.</p>
+</blockquote>
+<p>Lasciate il file perfettamente vuoto e salvatelo con il nome che preferite, lasciate l'estensione <code>.txt</code>. Per salvare il file in modo veloce potete usare la scorciatoia &quot;ctrl-s&quot;. Aprite Esplora Risorse e navigate nella cartella in cui si trova il file. Cliccate con il tasto destro sul file appena creato e selezionate &quot;Proprietà&quot;. Cercate la dimensione del file, dovrebbe essere esattamente 0 byte.</p>
+<p>Ora per esercizio provate a fare le seguenti cose:</p>
+<ol>
+<li>scrivete &quot;ciao&quot; su Blocco note e salvate (ricordatevi che potete usare ctrl-s). Quanto è diventata adesso la dimensione del file in byte?</li>
+<li>dopo ciao, alla fine della riga, premete invio per andare a capo. La dimensione del file è cambiata? di quanti byte?</li>
+<li>scrivete di nuovo ciao nella seconda riga e ricontrollate la dimensione del file per vedere cosa sta succedendo</li>
+</ol>
+<p>Cosa avete notato? Vi tornano i conti con quanto detto finora?</p>
+<p>Ora provate ad inserire un carattere che non fa parte dello standard ASCII (né base né esteso), come ad esempio un emoji o un carattere in un alfabeto diverso da quello latino (come ad esempio il greco, il rumeno, il turco, il cinese, il giapponese, etc.). Salvate il file e controllate la dimensione. Cosa è successo? di quanti byte è cambiato il file? Secondo voi perché?</p>
 
                     </main>
 
@@ -277,6 +360,20 @@ Quanti bit devo usare per poter contare tutte le penne?</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
