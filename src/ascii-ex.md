@@ -16,5 +16,8 @@ Cosa avete notato? Vi tornano i conti con quanto detto finora?
 
 Ora provate ad inserire un carattere che non fa parte dello standard ASCII (né base né esteso), come ad esempio un emoji o un carattere in un alfabeto diverso da quello latino (come ad esempio il greco, il rumeno, il turco, il cinese, il giapponese, etc.). Salvate il file e controllate la dimensione. Cosa è successo? di quanti byte è cambiato il file? Secondo voi perché?
 
+## Apple
+Eseguire lo stesso esercizio precedente, usando "Finder" invece di "Esplora risorse" e "Get Info" invece di "Proprietà". Per salvare il file, bisogna usare la scorciatoia ⌘S.
+
 
 
