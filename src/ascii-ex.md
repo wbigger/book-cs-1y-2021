@@ -1,4 +1,4 @@
-# Esercizi
+# Esercizio
 
 ## Windows
 Aprite l'applicazione Blocco note (Notepad, in inglese). Se avete una versione abbastanza recente, nella barra in basso vi dovrebbe comparire quale ritorno a capo l'editor sta usando, che per un nuovo file dovrebbe essere CRLF.

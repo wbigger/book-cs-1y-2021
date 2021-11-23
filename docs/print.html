@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="welcome.html"><strong aria-hidden="true">1.</strong> Benvenuti</a></li><li class="chapter-item expanded "><a href="binary.html"><strong aria-hidden="true">2.</strong> Numerazione binaria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="binary-ex.html"><strong aria-hidden="true">2.1.</strong> Esercizi</a></li></ol></li><li class="chapter-item expanded "><a href="ascii.html"><strong aria-hidden="true">3.</strong> Codifica dei caratteri</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ascii-ex.html"><strong aria-hidden="true">3.1.</strong> Esercizi</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="welcome.html"><strong aria-hidden="true">1.</strong> Benvenuti</a></li><li class="chapter-item expanded "><a href="binary.html"><strong aria-hidden="true">2.</strong> Numerazione binaria</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="binary-ex.html"><strong aria-hidden="true">2.1.</strong> Esercizi</a></li></ol></li><li class="chapter-item expanded "><a href="text.html"><strong aria-hidden="true">3.</strong> Codifica dei caratteri</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ascii.html"><strong aria-hidden="true">3.1.</strong> ASCII</a></li><li class="chapter-item expanded "><a href="ascii-ex.html"><strong aria-hidden="true">3.2.</strong> Esercizio</a></li><li class="chapter-item expanded "><a href="unicode.html"><strong aria-hidden="true">3.3.</strong> Unicode</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -262,6 +262,8 @@ Quanti bit devo usare per poter contare tutte le penne?</p>
 <p>Ho uno schermo largo 10 pixel ed alto 5 pixel. Uso 16 colori per ogni pixel. Di quanti bit ho bisogno per rappresentare in memoria tutto lo schermo?</p>
 <h2 id="domanda-aperta"><a class="header" href="#domanda-aperta">Domanda aperta</a></h2>
 <p>Immaginiamo che avete parcheggiato la vostra bicicletta con un lucchetto a 3 cifre, ed il numero per sbloccarlo è 73. Avete paura di dimenticarvi il numero, ma non volete scriverlo sopra la bici per paura che ovviamente un ladro potrebbe rubarla. Pensate quindi di usare due rotoli di scotch di colore diverso, uno di colore bianco (valore 1) ed uno di colore nero (valore 0) da attaccare sulla canna della bici. Qual è la sequenza di scotch corretta per rappresentare il codice di sblocco? Scrivere in massimo 4 righe (circa 320 caratteri) il ragionamento che avete usato per arrivare al risultato.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="codifica-dei-caratteri"><a class="header" href="#codifica-dei-caratteri">Codifica dei caratteri</a></h1>
+<p>In questo capitolo vedremo come i computer rappresentano i caratteri, sia quelli per noi più comuni che quelli più esotici, come le emoji.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ascii-codes"><a class="header" href="#ascii-codes">ASCII codes</a></h1>
 <p>Lo standard più usato per rappresentare i caratteri base dell'alfabeto latino è l'ASCII (pronuncia IPA: æski, proncia traslitterata in italiano: askii). ASCII è l'acronimo di American Standard Code for Information Interchange. Come dice il nome, è uno standard americano quindi è pensato soprattutto per la lingua inglese, che non prevede lettere con l'accento.</p>
 <blockquote>
@@ -330,7 +332,7 @@ Quanti bit devo usare per poter contare tutte le penne?</p>
 <tr><td align="center">|</td><td>barra verticale</td><td>vertical bar</td><td>pipe (tubo)</td></tr>
 <tr><td align="center">~</td><td>tilde</td><td>tilde</td><td></td></tr>
 </tbody></table>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="esercizi"><a class="header" href="#esercizi">Esercizi</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="esercizio"><a class="header" href="#esercizio">Esercizio</a></h1>
 <h2 id="windows"><a class="header" href="#windows">Windows</a></h2>
 <p>Aprite l'applicazione Blocco note (Notepad, in inglese). Se avete una versione abbastanza recente, nella barra in basso vi dovrebbe comparire quale ritorno a capo l'editor sta usando, che per un nuovo file dovrebbe essere CRLF.</p>
 <blockquote>
@@ -347,6 +349,8 @@ Quanti bit devo usare per poter contare tutte le penne?</p>
 <p>Ora provate ad inserire un carattere che non fa parte dello standard ASCII (né base né esteso), come ad esempio un emoji o un carattere in un alfabeto diverso da quello latino (come ad esempio il greco, il rumeno, il turco, il cinese, il giapponese, etc.). Salvate il file e controllate la dimensione. Cosa è successo? di quanti byte è cambiato il file? Secondo voi perché?</p>
 <h2 id="apple"><a class="header" href="#apple">Apple</a></h2>
 <p>Eseguire lo stesso esercizio precedente, usando &quot;Finder&quot; invece di &quot;Esplora risorse&quot; e &quot;Get Info&quot; invece di &quot;Proprietà&quot;. Per salvare il file, bisogna usare la scorciatoia ⌘S.</p>
+<div style="break-before: page; page-break-before: always;"></div><p>https://unicode.org/emoji/charts/full-emoji-list.html</p>
+<p>https://en.wikipedia.org/wiki/File:Utf8webgrowth.svg</p>
 
                     </main>
 
